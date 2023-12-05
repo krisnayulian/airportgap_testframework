@@ -3,7 +3,7 @@ from datetime import datetime
 import requests
 from assertpy import assert_that
 
-BASE_URL = "https://airportgap.dev-tester.com/api"
+BASE_URL = "https://airportgap.com/api"
 
 
 def get_token(email, password):
@@ -21,14 +21,14 @@ def get_my_favorite_airport(token):
 
 
 def test_token():
-    token = get_token(email="naruto@mailinator.com", password="shuriken")
+    token = get_token(email="krisnayulian48.com", password="realmadrid")
     assert_that(token.status_code).is_equal_to(200)
     assert_that(token.json()).contains_key("token")
     assert_that(token.json().get("token")).is_not_empty()
 
 
 def test_get_favorite():
-    give_me_token = get_token(email="naruto@mailinator.com", password="shuriken")
+    give_me_token = get_token(email="krisnayulian48.com", password="realmadrid")
     token = give_me_token.json().get("token")
     header = {
         "Authorization": f"Token {token}"
@@ -45,7 +45,7 @@ def test_add_new_favorite():
     This test will failed, if NRT already in my favorite list
     Need to remove after test teardown
     """
-    give_me_token = get_token(email="naruto@mailinator.com", password="shuriken")
+    give_me_token = get_token(email="krisnayulian48.com", password="realmadrid")
     token = give_me_token.json().get("token")
 
     before_add = get_my_favorite_airport(token)
@@ -74,7 +74,7 @@ def test_add_new_favorite():
 
 
 def test_update_favorite_note():
-    give_me_token = get_token(email="naruto@mailinator.com", password="shuriken")
+    give_me_token = get_token(email="krisnayulian48.com", password="realmadrid")
     token = give_me_token.json().get("token")
 
     before_add = get_my_favorite_airport(token)
@@ -106,7 +106,7 @@ def test_update_favorite_note():
 
 
 def test_delete_favorite():
-    give_me_token = get_token(email="naruto@mailinator.com", password="shuriken")
+    give_me_token = get_token(email="krisnayulian48.com", password="realmadrid")
     token = give_me_token.json().get("token")
 
     before_add = get_my_favorite_airport(token)

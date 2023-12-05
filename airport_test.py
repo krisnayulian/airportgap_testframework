@@ -1,7 +1,10 @@
 import requests
 from assertpy import assert_that
 
-BASE_URL = "https://airportgap.dev-tester.com/api"
+BASE_URL = "https://airportgap.com/api"
+
+
+import requests
 
 
 def test_get_all_airports():
@@ -37,7 +40,7 @@ def test_calculate_distance():
         "from": "LAE",
         "to": "NRT"
     }
-    response = requests.post("https://airportgap.dev-tester.com/api/airports/distance", data=payload)
+    response = requests.post("https://airportgap.com/api/airports/distance", data=payload)
     data = response.json().get("data")
     assert_that(data["type"]).is_equal_to("airport_distance")
     assert_that(data["attributes"]).is_not_empty()
