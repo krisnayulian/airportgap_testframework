@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm Krisnanda</h1>
 Currently learning as QA Engineer, 
-Having knowledge to create web automation using Selenium phyton. API Testing using Postman. And having knowledge about Project Management Tools such a Jira.
+Having knowledge to create Web Automation using Selenium Python and Java. Mobile Automation using Appium. API Testing using Postman. And having knowledge about Project Management Tools such a Jira.
 
 - 📫 How to reach me **krisnayulian48@gmail.com**
 
